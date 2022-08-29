@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<body>
+
+  <h1 style="font-size: 60px">Clients!</h1>
+  <div>
+    <a routerLink="/admindashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to admin dashboard</a>
+  </div>
+
+  <div style="align-items: center; margin-left: 20%; font-size: 20px;">
+    <table class="table table-bordered">
+      <thead class="thead">
+        <tr>
+          <th>
+            Applicant Id
+          </th>
+          <th>User Id </th>
+          <th> Name </th>
+          <th> Age </th>
+          <th> Gender </th>
+          <th> Edit </th>
+          <th> Delete</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let applicant of applicantDetails">
+          <td>
+            {{applicant.applicantId}}
+          </td>
+          <td>
+            {{applicant.user.userId}}
+          </td>
+          <td>
+            {{applicant.name}}
+          </td>
+          <td>
+            {{applicant.age}}
+          </td>
+          <td> {{applicant.gender}} </td>
+          <td> <button type = "button"> Edit </button></td>
+          <td> <button type = "button"> Delete </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>

@@ -17,6 +17,12 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
+import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
+import { LoandetailsComponent } from './loandetails/loandetails.component';
+import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
+import { AllusersComponent } from './allusers/allusers.component';
+import { AllapplicantsComponent } from './allapplicants/allapplicants.component';
 
 
 const appRoute: Routes = [
@@ -31,7 +37,14 @@ const appRoute: Routes = [
   {path:'forgotpassword',component: ForgotpasswordComponent},
   {path:'userdashboard',component: UserdashboardComponent},
   {path:'adminlogin',component: AdminloginComponent},
-  {path:'admindashboard',component: AdmindashboardComponent}
+  {path:'admindashboard',component: AdmindashboardComponent},
+  {path:'personaldetails', component: PersonaldetailsComponent},
+  {path:'loandetails',component: LoandetailsComponent},
+  {path:'vehicledetails',component: VehicledetailsComponent},
+  {path:'employmentdetails',component: EmploymentdetailsComponent},
+  {path:'allusers',component: AllusersComponent},
+  {path:'allapplicants',component: AllapplicantsComponent}
+
 
 ]
 
@@ -47,7 +60,13 @@ const appRoute: Routes = [
     ForgotpasswordComponent,
     UserdashboardComponent,
     AdminloginComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    EmploymentdetailsComponent,
+    VehicledetailsComponent,
+    LoandetailsComponent,
+    PersonaldetailsComponent,
+    AllusersComponent,
+    AllapplicantsComponent
   ],
   imports: [
     BrowserModule,

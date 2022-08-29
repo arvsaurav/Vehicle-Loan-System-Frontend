@@ -13,7 +13,7 @@ export class SignupComponent implements OnInit {
 
   public signupForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private http: HttpClient, private formGroup: FormGroup) { }
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({

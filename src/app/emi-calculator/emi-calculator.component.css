@@ -1,0 +1,65 @@
+#border{
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   
+   #emi-calculation{
+    margin-top:10px;
+     width: 500px;
+     height: 270px;
+     border: 2px solid blue;
+     box-shadow: 2px 5px 5px gray;
+     border-radius: 5px;
+   }
+   #title{
+     font-size: 30px;
+     font-family: verdana;
+     color: blue;
+     text-align: center;
+     text-decoration: underline;
+   }
+   
+   #emi-output{
+     width: 500px;
+     height: 280px;
+     border: 2px solid blue;
+     box-shadow: 2px 5px 5px gray;
+     border-radius: 5px;
+     margin-top: 10px;
+   }
+   
+   .section{
+     margin-left: 10px;
+     font-size: 20px;
+     padding: 10px;
+     font-family: verdana;
+   }
+   .result{
+     margin-top: 20px;
+     margin-left: 10px;
+     font-size: 20px;
+     padding: 5px;
+     font-family: verdana;
+   }
+   
+   .input{
+     float: right;
+     height: 20px;
+     margin-right: 10px;
+   }
+   
+    #calc,#reset{
+     width: 200px;
+     height: 30px;
+     font-size: 20px;
+     background-color: steelblue;
+     box-shadow: 2px 5px 5px gray; 
+   }
+   .submit{
+     text-align: center;
+     margin-top: 20px;
+   }
+   #reset{
+     background-color: YELLOW;
+   }
