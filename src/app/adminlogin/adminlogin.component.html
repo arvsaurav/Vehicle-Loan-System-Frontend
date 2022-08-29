@@ -1,0 +1,22 @@
+<div class="container">
+    <img src="../../assets/img/vehicleHome.jpg" alt="Snow" style="width:100%;">
+    <div class="right">
+        <div class="text-center">
+            <h1 style="font-size: 50px">Admin Login!</h1>
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="formclass">
+                <label for="adminId" class="form-label" style="padding-right: 6px;">Admin Id</label>
+                <input formControlName="adminId" type="number" class="form-control" id="adminId">
+            </div>
+            <div class="formclass">
+                <label for="password" class="form-label" style="padding-right: 6px;">Password</label>
+                <input formControlName="password" type="password" class="form-control" id="loginPassword">
+            </div>
+            <button type="submit" class="button">Login</button>
+        </form>
+        <div style="margin-top: 20px;">
+            <a style="color: rgb(6, 80, 71);" routerLink="/login"> Back to user login! </a>
+        </div>
+    </div>
+</div>

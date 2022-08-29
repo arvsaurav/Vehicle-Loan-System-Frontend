@@ -14,6 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 
 const appRoute: Routes = [
@@ -25,7 +28,10 @@ const appRoute: Routes = [
   {path:'apply-loan',component: ApplyLoanComponent},
   {path:'login',component: LoginComponent},
   {path:'signup',component: SignupComponent},
-  {path:'forgotpassword',component: ForgotpasswordComponent}
+  {path:'forgotpassword',component: ForgotpasswordComponent},
+  {path:'userdashboard',component: UserdashboardComponent},
+  {path:'adminlogin',component: AdminloginComponent},
+  {path:'admindashboard',component: AdmindashboardComponent}
 
 ]
 
@@ -38,7 +44,10 @@ const appRoute: Routes = [
     ApplyLoanComponent,
     LoginComponent,
     SignupComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    UserdashboardComponent,
+    AdminloginComponent,
+    AdmindashboardComponent
   ],
   imports: [
     BrowserModule,

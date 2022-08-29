@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -12,31 +12,31 @@ export class LoginComponent implements OnInit {
 
   public loginForm !: FormGroup
 
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      userId:[''],
-      password:['']
+      userId: [''],
+      password: ['']
     })
   }
 
-  login() {
-    this.http.get<any>("http://localhost:8081/users")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
+  onSubmit() {
+
+    const user = this.userService.getAllUsers();
+    user.subscribe(res => {
+      const u = res.find((a: any) => {
         return a.userId == this.loginForm.value.userId && a.password == this.loginForm.value.password
       });
-      if(user) {
+      if(u) {
         alert("Login successful!");
         this.loginForm.reset();
-        this.router.navigate(['apply-loan']);
+        this.router.navigate(['userdashboard']);
       }
       else {
         alert("Invalid credentials!");
+        this.loginForm.reset();
       }
-    }, err=>{
-      alert("Something went wrong!");
     })
   }
 

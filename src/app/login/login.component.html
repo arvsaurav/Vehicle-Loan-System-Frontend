@@ -4,7 +4,7 @@
         <div class="text-center">
             <h1 style="font-size: 50px">Login!</h1>
         </div>
-        <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="formclass">
                 <label for="userId" class="form-label" style="padding-right: 29px;">User Id</label>
                 <input formControlName="userId" type="number" class="form-control" id="userId">
@@ -20,6 +20,9 @@
         </div>
         <div style="margin-top: 10px;">
         <a style="color: rgb(6, 80, 71);" routerLink="/signup"> New user? Click here to signup!</a>
+        </div>
+        <div style="margin-top: 10px;">
+            <a style="color: rgb(6, 80, 71);" routerLink="/adminlogin"> Admin login!!</a>
         </div>
     </div>
 </div>
