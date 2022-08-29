@@ -1,0 +1,30 @@
+.container h1,
+label {
+    color: aliceblue;
+}
+
+.right {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    text-decoration: solid;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.formclass {
+    font-size: 25px;
+}
+
+.form-control {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.button {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(6, 80, 71);
+}

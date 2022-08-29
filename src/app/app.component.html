@@ -1,0 +1,22 @@
+<div class = "main-container">
+    <div class = "nav-container">
+      <label class="logo">VehicleLoan</label>
+      <ul>
+        <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+        <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+        <li><a routerLink="/emi-calculator" routerLinkActive="active" ariaCurrentWhenActive="page">EMI Calculator</a></li>
+        <li><a routerLink="/apply-loan" routerLinkActive="active" ariaCurrentWhenActive="page">Apply Loan</a></li>
+        <li><a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a></li>
+        <!-- <li><a routerLink="/signup" routerLinkActive="active" ariaCurrentWhenActive="page">Sign Up</a></li>
+        <li><a routerLink="/forgotpassword" routerLinkActive="active" ariaCurrentWhenActive="page">Forgot Password</a></li> -->
+      </ul>
+    </div>
+  
+    <div class="component-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <footer>
+    <p>© 2022 Tata Finance</p>
+</footer>
+

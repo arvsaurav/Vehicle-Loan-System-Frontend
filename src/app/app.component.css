@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div.nav-container{
+    height: 80px;
+    width: 100%;
+    background: #125752;
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+.nav-container ul{
+    float: right;
+    margin-right: 40px;
+}
+.nav-container ul li{
+    display: inline-block;
+    margin: 0 12px;
+    line-height: 80px;
+}
+.nav-container ul li a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+.nav-container ul li a:hover, a:active{
+	border: 1px solid white;
+    transition: .5s;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #125752;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+}

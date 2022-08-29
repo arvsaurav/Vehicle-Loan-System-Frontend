@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .right {
+    position: absolute;
+    bottom: 300px;
+    right: 50px;
+    text-decoration: solid;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+  

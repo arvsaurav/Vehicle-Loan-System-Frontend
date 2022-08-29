@@ -1,0 +1,21 @@
+<div class="container">
+    <img src="../../assets/img/vehicleHome.jpg" alt="Snow" style="width:100%;">
+    <div class="right">
+        <div class="text-center">
+            <h1 style="font-size: 50px">Sign Up!</h1>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+            <div class="formclass">
+                <label for="userId" class="form-label" style="padding-right: 29px;">User Id</label>
+                <input formControlName="userId" type="number" class="form-control" id="userId">
+            </div>
+            <div class="formclass">
+                <label for="loginPassword" class="form-label" style="padding-right: 6px;">Password</label>
+                <input formControlName="password" type="password" class="form-control" id="loginPassword">
+            </div>
+            <button type="submit" class="button">Register</button>
+        </form>
+        <br>
+        <a style="color: rgb(6, 80, 71); margin-top: 10px;" routerLink="/login"> Already a user? Login!</a>
+    </div>
+</div>
