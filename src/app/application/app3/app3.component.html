@@ -1,0 +1,32 @@
+<div class="signupSection">
+  <div class="info">
+    <h2>Application Form</h2>
+    <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+    <p>Page 4</p>
+  </div>
+  <form [formGroup]="appForm3" (ngSubmit)="onSubmit()"  class="signupForm" name="signupform">
+    <h2>Vehicle Details</h2>
+    <ul class="noBullet">
+      <li>
+        <label for="manufacturer"></label>
+        <input type="text" class="inputFields" id="manufacturer"  placeholder="Car Make" formControlName = "manufacturer">
+      </li>
+      <li>
+          <label for="model"></label>
+          <input type="text" class="inputFields" id="model"  placeholder="Car Model" formControlName = "model">
+        </li>
+        <li>
+          <label for="exShowroomPrice"></label>
+          <input type="text" class="inputFields" id="exShowroomPrice"  placeholder="Ex-Showroom Price" formControlName = "exShowroomPrice">
+        </li>
+        <li>
+        <button type="submit"id="join-btn" (click)="onBack()"  >  Back</button>
+          <button type="submit"id="join-btn" >Next</button>
+          
+      </li>
+  
+    </ul>
+    <br><br><br><br><br><br><br>
+  </form>
+  
+</div>

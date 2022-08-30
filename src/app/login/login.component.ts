@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         alert("Login successful!");
         //console.log(u);
         sessionStorage.setItem('key', JSON.stringify(u));
-        var item = JSON.parse(sessionStorage.getItem('key') || '{}');
+        //var item = JSON.parse(sessionStorage.getItem('key') || '{}');
         //console.log(item);
         this.loginForm.reset();
         this.router.navigate(['userdashboard']);

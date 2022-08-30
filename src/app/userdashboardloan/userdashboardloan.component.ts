@@ -16,7 +16,7 @@ export class UserdashboardloanComponent implements OnInit {
 
   constructor(private userService : UserService, private loanService : LoanService, private vehicleService : VehicleService) { 
     var item = JSON.parse(sessionStorage.getItem('key') || '{}');
-    this.getApplicantById(2);
+    this.getApplicantById(item.userId);
     // this.getLoanById(   );
     // this.getVehicleById(   );
   }

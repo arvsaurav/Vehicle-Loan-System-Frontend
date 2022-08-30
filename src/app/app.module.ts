@@ -17,13 +17,17 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-import { EmploymentdetailsComponent } from './employmentdetails/employmentdetails.component';
-import { VehicledetailsComponent } from './vehicledetails/vehicledetails.component';
-import { LoandetailsComponent } from './loandetails/loandetails.component';
-import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
 import { AllusersComponent } from './allusers/allusers.component';
 import { AllapplicantsComponent } from './allapplicants/allapplicants.component';
 import { UserdashboardloanComponent } from './userdashboardloan/userdashboardloan.component';
+import { App1Component } from './application/app1/app1.component';
+import { App2Component } from './application/app2/app2.component';
+import { App3Component } from './application/app3/app3.component';
+import { App4Component } from './application/app4/app4.component';
+import { App5Component } from './application/app5/app5.component';
+import { ApplicationComponent } from './application/application.component';
+import { EligibilityComponent } from './eligibility/eligibility.component';
+import { LoanOfferComponent } from './loan-offer/loan-offer.component';
 
 
 const appRoute: Routes = [
@@ -39,13 +43,17 @@ const appRoute: Routes = [
   {path:'userdashboard',component: UserdashboardComponent},
   {path:'adminlogin',component: AdminloginComponent},
   {path:'admindashboard',component: AdmindashboardComponent},
-  {path:'personaldetails', component: PersonaldetailsComponent},
-  {path:'loandetails',component: LoandetailsComponent},
-  {path:'vehicledetails',component: VehicledetailsComponent},
-  {path:'employmentdetails',component: EmploymentdetailsComponent},
   {path:'allusers',component: AllusersComponent},
   {path:'allapplicants',component: AllapplicantsComponent},
-  {path:'userdashboardloan',component: UserdashboardloanComponent}
+  {path:'userdashboardloan',component: UserdashboardloanComponent},
+  {path:'loanoffer',component:LoanOfferComponent},
+  {path:'eligibility',component:EligibilityComponent},
+  {path:'application',component:ApplicationComponent},
+  {path:'app1',component:App1Component},
+  {path:'app2',component:App2Component},
+  {path:'app3',component:App3Component},
+  {path:'app4',component:App4Component},
+  {path:'app5',component:App5Component},
 
 ]
 
@@ -62,13 +70,18 @@ const appRoute: Routes = [
     UserdashboardComponent,
     AdminloginComponent,
     AdmindashboardComponent,
-    EmploymentdetailsComponent,
-    VehicledetailsComponent,
-    LoandetailsComponent,
-    PersonaldetailsComponent,
     AllusersComponent,
     AllapplicantsComponent,
-    UserdashboardloanComponent
+    UserdashboardloanComponent,
+    LoanOfferComponent,
+    EligibilityComponent,
+    ApplicationComponent,
+    App2Component,
+    App3Component,
+    App4Component,
+    App5Component,
+    HomeComponent,
+    App1Component
   ],
   imports: [
     BrowserModule,
