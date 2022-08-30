@@ -28,7 +28,7 @@ export class ForgotpasswordComponent implements OnInit {
         return a.userId == this.forgotpasswordForm.value.userId
       });
       if(user) {
-        this.http.post<any>("http://localhost:8081/adduser", this.forgotpasswordForm.value)
+        this.http.post<user>("http://localhost:8081/adduser", this.forgotpasswordForm.value)
         .subscribe(res=>{
         alert("Password changed sucessfully!");
         this.forgotpasswordForm.reset();
@@ -45,4 +45,10 @@ export class ForgotpasswordComponent implements OnInit {
     })
   }
 
+  
+
+}
+export interface user {
+  userId:number;
+  pasword:string;
 }

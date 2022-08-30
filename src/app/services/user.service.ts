@@ -16,12 +16,16 @@ export class UserService {
   }
 
   getUserById(id: number) : Observable<any> {
-    return this.http.get<any>(this.baseUrl+"user/"+id);
+    return this.http.get(this.baseUrl+"user/"+id);
   }
 
-  addUser(user: User) : Observable<any>{
-    return this.http.post<any>(this.baseUrl+"adduser", user);
+  getApplicantById(userId: number) : Observable<any> {
+    return this.http.get(this.baseUrl+"applicant/"+userId);
   }
+
+  // addUser(user: User) : Observable<any>{
+  //   return this.http.post<any>(this.baseUrl+"adduser", user);
+  // }
 
   getAllApplicants() : Observable<any> {
     return this.http.get<any>(this.baseUrl+"applicants");
@@ -29,7 +33,8 @@ export class UserService {
 
 }
 
-export class User {
-  private userId !: number;
-  private password !: String;
-}
+// export class User {
+//   private
+//   private userId !: number;
+//   private password !: String;
+// }

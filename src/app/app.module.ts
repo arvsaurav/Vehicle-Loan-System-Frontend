@@ -23,6 +23,7 @@ import { LoandetailsComponent } from './loandetails/loandetails.component';
 import { PersonaldetailsComponent } from './personaldetails/personaldetails.component';
 import { AllusersComponent } from './allusers/allusers.component';
 import { AllapplicantsComponent } from './allapplicants/allapplicants.component';
+import { UserdashboardloanComponent } from './userdashboardloan/userdashboardloan.component';
 
 
 const appRoute: Routes = [
@@ -43,8 +44,8 @@ const appRoute: Routes = [
   {path:'vehicledetails',component: VehicledetailsComponent},
   {path:'employmentdetails',component: EmploymentdetailsComponent},
   {path:'allusers',component: AllusersComponent},
-  {path:'allapplicants',component: AllapplicantsComponent}
-
+  {path:'allapplicants',component: AllapplicantsComponent},
+  {path:'userdashboardloan',component: UserdashboardloanComponent}
 
 ]
 
@@ -66,7 +67,8 @@ const appRoute: Routes = [
     LoandetailsComponent,
     PersonaldetailsComponent,
     AllusersComponent,
-    AllapplicantsComponent
+    AllapplicantsComponent,
+    UserdashboardloanComponent
   ],
   imports: [
     BrowserModule,

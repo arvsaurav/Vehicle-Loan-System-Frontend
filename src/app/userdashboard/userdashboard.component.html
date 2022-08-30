@@ -5,19 +5,19 @@
 body {margin:0}
 
 .icon-bar {
-  height:950px;
-  width: 300px;
-  background-color:LIGHTBLUE;
-}
+    height: 680px;
+    width: 300px;
+    background-color: rgb(36, 98, 119);
+  }
 
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 50px;
-  transition: all 0.3s ease;
-  color: White;
-  font-size: 36px;
-}
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 50px;
+    transition: all 0.3s ease;
+    color: White;
+    font-size: 36px;
+  }
 
 .icon-bar a:hover {
   background-color: black;
@@ -30,10 +30,8 @@ body {margin:0}
 <body>
 
 <div class="icon-bar">
-   <a class="active"><label>USER DASHBOARD</label></a>
-<a class="#"><label>Loan Amount</label></a>
-<a class="#"><label>EMI Scheduler</label></a>
-<a class="#"><label>Settings</label></a>
+   <a routerLink="/userdashboard">User Dashboard</a>
+   <a routerLink="/userdashboardloan"> Loan Amount </a>
 </div>
   
 </body>

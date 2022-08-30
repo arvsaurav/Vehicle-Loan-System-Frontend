@@ -2,12 +2,12 @@
 
 <body>
 
-  <h1 style="font-size: 60px">Clients!</h1>
+  <h1 style="font-size: 60px">Loan Amount!</h1>
   
   <div>
-    <a routerLink="/admindashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to admin dashboard</a>
+    <a routerLink="/userdashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to user dashboard</a>
   </div>
-  <div style="align-items: center; margin-left: 15%; font-size: 20px;"> Applicant Details!
+  <div style="align-items: center; margin-left: 15%; font-size: 20px;"> My Details!
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
@@ -26,7 +26,7 @@
         </tr>
       </thead>
       <tbody class="tbody">
-        <tr *ngFor="let applicant of applicantDetails">
+        <tr *ngFor="let applicant of applicantById">
           <td> {{applicant.applicantId}} </td>
           <td> {{applicant.name}} </td>
           <td> {{applicant.age}} </td>
@@ -46,7 +46,7 @@
   </div>
 
 
-  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px;"> Loan Details!
+  <!-- <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px;"> Loan Details!
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
@@ -63,7 +63,7 @@
         </tr>
       </thead>
       <tbody class="tbody">
-        <tr *ngFor="let loan of loanDetails">
+        <tr *ngFor="let loan of loanById">
           <td> {{loan.loanId}} </td>
           <td> 1 </td>
           <td> {{loan.accountType}} </td>
@@ -94,7 +94,7 @@
         </tr>
       </thead>
       <tbody class="tbody">
-        <tr *ngFor="let vehicle of vehicleDetails">
+        <tr *ngFor="let vehicle of vehicleById">
           <td> {{vehicle.vehicleId}} </td>
           <td> {{vehicle.applicantId}} </td>
           <td> {{vehicle.manufacturer}} </td>
@@ -105,6 +105,6 @@
         </tr>
       
       </tbody>
-    </table>
-  </div>
+    </table> -->
+  <!-- </div> -->
 </body>

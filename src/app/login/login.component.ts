@@ -3,11 +3,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
+export const AUTH_TOKEN_KEY = "auth-token";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   public loginForm !: FormGroup
@@ -29,7 +32,12 @@ export class LoginComponent implements OnInit {
         return a.userId == this.loginForm.value.userId && a.password == this.loginForm.value.password
       });
       if(u) {
+        // u is authData
         alert("Login successful!");
+        //console.log(u);
+        sessionStorage.setItem('key', JSON.stringify(u));
+        var item = JSON.parse(sessionStorage.getItem('key') || '{}');
+        //console.log(item);
         this.loginForm.reset();
         this.router.navigate(['userdashboard']);
       }
