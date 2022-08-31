@@ -2,14 +2,18 @@
   <div class="info">
     <h2>Application Form</h2>
     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-    <p>Page 4</p>
+    <p>Page 3</p>
   </div>
   <form [formGroup]="appForm3" (ngSubmit)="onSubmit()"  class="signupForm" name="signupform">
     <h2>Vehicle Details</h2>
     <ul class="noBullet">
       <li>
         <label for="manufacturer"></label>
-        <input type="text" class="inputFields" id="manufacturer"  placeholder="Car Make" formControlName = "manufacturer">
+        <input type="text" class="inputFields" id="manufacturer"  placeholder="Car Manufacturer" formControlName = "manufacturer">
+      </li>
+      <li>
+        <label for="carType"></label>
+        <input type="text" class="inputFields" id="carType"  placeholder="Car Type" formControlName = "carType">
       </li>
       <li>
           <label for="model"></label>
@@ -18,6 +22,10 @@
         <li>
           <label for="exShowroomPrice"></label>
           <input type="text" class="inputFields" id="exShowroomPrice"  placeholder="Ex-Showroom Price" formControlName = "exShowroomPrice">
+        </li>
+        <li>
+          <label for="onRoadPrice"></label>
+          <input type="text" class="inputFields" id="onRoadPrice"  placeholder="On Road Price" formControlName = "onRoadPrice">
         </li>
         <li>
         <button type="submit"id="join-btn" (click)="onBack()"  >  Back</button>

@@ -14,5 +14,9 @@ export class LoanService {
   getAllLoans() : Observable<any> {
     return this.http.get<any>(this.baseUrl+"loans");
   }
+
+  updateLoanById(id:number, loan:any) : Observable<any>{
+    return this.http.put<any>(this.baseUrl+"addloan/"+id, loan);
+  }
   
 }

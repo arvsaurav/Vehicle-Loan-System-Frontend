@@ -2,11 +2,15 @@
   <div class="info">
     <h2>Application Form</h2>
     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-    <p>Page 5</p>
+    <p>Page 4</p>
   </div>
   <form [formGroup]="appForm4" (ngSubmit)="onSubmit()"  class="signupForm" name="signupform">
     <h2>Loan Details</h2>
     <ul class="noBullet">
+      <li>
+        <label for="accountType"></label>
+        <input type="text" class="inputFields" id="accountType"  placeholder="Account Type" formControlName = "accountType">
+      </li>
       <li>
         <label for="amount"></label>
         <input type="text" class="inputFields" id="amount"  placeholder="Loan Amount" formControlName = "amount">
@@ -20,8 +24,12 @@
           <input type="text" class="inputFields" id="rateOfInterest"  placeholder="Rate Of Interest" formControlName = "rateOfInterest">
         </li>
         <li>
+          <label for="emi"></label>
+          <input type="text" class="inputFields" id="emi"  placeholder="Emi" formControlName = "emi">
+        </li>
+        <li>
         <button type="submit"id="join-btn" (click)="onBack()"  >  Back</button>
-          <button type="submit"id="join-btn" >Next</button>
+          <button type="submit"id="join-btn" >Submit</button>
           
       </li>
   

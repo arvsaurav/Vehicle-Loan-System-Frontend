@@ -46,39 +46,35 @@
   </div>
 
 
-  <!-- <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px;"> Loan Details!
+  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px;"> Loan Details!
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
           <th> Loan Id </th>
-          <th> Applicant Id </th>
           <th> Account Type </th>
           <th> Amount </th>
           <th> Loan Tenure </th>
           <th> Rate of Interest </th>
           <th> Emi </th>
           <th> Loan Status </th>
-          <th> Approve Loan </th>
-          <th> Decline Loan </th>
         </tr>
       </thead>
       <tbody class="tbody">
-        <tr *ngFor="let loan of loanById">
+        <tr *ngFor="let loan of loanByApplicantId">
           <td> {{loan.loanId}} </td>
-          <td> 1 </td>
           <td> {{loan.accountType}} </td>
           <td> {{loan.amount}} </td>
           <td> {{loan.loanTenure}} </td>
           <td> {{loan.rateOfInterest}} </td>
           <td> {{loan.emi}} </td>
           <td> {{loan.loanStatus}} </td>
-          <td> <button type = "button" style="color: white; background-color: rgb(9, 63, 9); font-size: 15px; padding: 5px;"> Approve </button></td>
-          <td> <button type = "button" style="color: white; background-color: rgb(113, 3, 3); font-size: 15px; padding: 5px;"> Decline </button></td>
         </tr>
       
       </tbody>
     </table>
   </div>
+
+  <!--
 
   <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px; margin-bottom: 150px"> Vehicle Details!
     <table class="table table-bordered">

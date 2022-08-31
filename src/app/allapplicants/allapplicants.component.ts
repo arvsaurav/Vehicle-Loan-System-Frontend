@@ -13,11 +13,9 @@ export class AllapplicantsComponent implements OnInit {
   applicantDetails = null;
   loanDetails = null;
   vehicleDetails = null;
-  vehicleById = null;
 
   constructor(private userService : UserService, private loanService : LoanService, private vehicleService : VehicleService) { 
     this.getAllApplicants();
-    //this.getVehicleById()
     this.getAllVehicles();
     this.getAllLoans();
   }
@@ -40,14 +38,32 @@ export class AllapplicantsComponent implements OnInit {
     })
   }
 
-  // getVehicleById(id:number) {
-
-  // }
-
   getAllLoans() {
     this.loanService.getAllLoans().subscribe(
       (res)=>{
               this.loanDetails = res;
     })
+  }
+
+  onApprove(id:number,loan:any) {
+    loan.loanStatus="Approved";
+    console.log(loan);
+    this.loanService.updateLoanById(id, loan).subscribe(
+      (res)=>{
+        this.loanDetails = res;
+      }
+    )
+    alert("Loan Approved!");
+  }
+
+  onReject(id:number, loan:any) {
+    loan.loanStatus="Rejected";
+    console.log(loan);
+    this.loanService.updateLoanById(id, loan).subscribe(
+      (res)=>{
+        this.loanDetails = res;
+      }
+    )
+    alert("Loan Rejected!");
   }
 }

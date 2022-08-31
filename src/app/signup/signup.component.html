@@ -4,7 +4,7 @@
         <div class="text-center">
             <h1 style="font-size: 50px">Sign Up!</h1>
         </div>
-        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="signupForm" (ngSubmit)="verifyUser()">
             <div class="formclass">
                 <label for="userId" class="form-label" style="padding-right: 29px;">User Id</label>
                 <input formControlName="userId" type="number" class="form-control" id="userId">

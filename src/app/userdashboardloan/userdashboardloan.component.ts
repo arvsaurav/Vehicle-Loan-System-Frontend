@@ -11,12 +11,13 @@ import { VehicleService } from '../services/vehicle.service';
 export class UserdashboardloanComponent implements OnInit {
 
   applicantById:any[]=[];
-  loanById=null;
+  loanByApplicantId=null;
   vehicleById = null;
 
   constructor(private userService : UserService, private loanService : LoanService, private vehicleService : VehicleService) { 
     var item = JSON.parse(sessionStorage.getItem('key') || '{}');
     this.getApplicantById(item.userId);
+    this.getLoanByApplicantId(item.userId);
     // this.getLoanById(   );
     // this.getVehicleById(   );
   }
@@ -28,6 +29,15 @@ export class UserdashboardloanComponent implements OnInit {
     this.userService.getApplicantById(userId).subscribe(data=>
       {
         this.applicantById.push(data);
+        console.log(data);
+      })
+  }
+
+  getLoanByApplicantId(applicantId : number) {
+    this.userService.getLoanByApplicantId(applicantId).subscribe(data =>
+      {
+        this.loanByApplicantId = data;
+        console.log("hello");
         console.log(data);
       })
   }

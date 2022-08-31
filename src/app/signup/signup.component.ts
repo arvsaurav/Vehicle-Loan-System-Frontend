@@ -13,6 +13,8 @@ export class SignupComponent implements OnInit {
 
   public signupForm !: FormGroup;
 
+  userDetails = null;
+
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router: Router, private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -22,45 +24,28 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  // onSubmit() {
-  //   console.log(this.signupForm.value);
-  //   const isUser = this.userService.getUserById(this.signupForm.value.userId);
-  //   console.log(isUser);
-  //   // if(isUser == null) {
-  //     const user = this.userService.addUser(this.signupForm.value);
-  //     this.signupForm.reset();
-  //     this.router.navigate(['login']);
-  //   // }
-  //   // else {
-  //   //   alert("User already exists!");
-  //   // }
+  verifyUser() {
+    this.userService.getAllUsers().subscribe((res)=> {
+        const user = res.find((a:any)=>{
+          return a.userId == this.signupForm.value.userId
+        });
+        if(user) {
+          alert("User already exists!");
+          this.signupForm.reset();
+          this.router.navigate(['login']);
+        }
+        else {
+          this.addUser(this.signupForm.value);
+        }
+    })
+  }
 
-  // }
-
-  onSubmit() {
-    this.http.get<any>("http://localhost:8081/users")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.userId == this.signupForm.value.userId
-      });
-      if(user) {
-        alert("User already exists!");
-        this.signupForm.reset();
-        this.router.navigate(['login']);
-      }
-      else {
-        this.http.post<any>("http://localhost:8081/adduser", this.signupForm.value)
-        .subscribe(res=>{
+  addUser(user:any) {
+    this.userService.addUser(user).subscribe((res)=>{
         alert("Signup Successful!");
         this.signupForm.reset();
         this.router.navigate(['login']);
-        }, err=>{
-          alert("Something went wrong!");
-        })    
-      }
-    }, err=>{
-      alert("Something went wrong!");
     })
- }
+  }
 
 }

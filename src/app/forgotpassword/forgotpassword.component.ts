@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-forgotpassword',
@@ -12,7 +13,7 @@ export class ForgotpasswordComponent implements OnInit {
 
   public forgotpasswordForm !: FormGroup
 
-  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router) { }
+  constructor(private formBuilder : FormBuilder, private http : HttpClient, private router : Router, private userService : UserService) { }
 
   ngOnInit(): void {
     this.forgotpasswordForm  = this.formBuilder.group({
@@ -21,34 +22,23 @@ export class ForgotpasswordComponent implements OnInit {
     })
   }
 
-  forgotpassword() {
-    this.http.get<any>("http://localhost:8081/users")
-    .subscribe(res=>{
-      const user = res.find((a:any)=>{
-        return a.userId == this.forgotpasswordForm.value.userId
-      });
-      if(user) {
-        this.http.post<user>("http://localhost:8081/adduser", this.forgotpasswordForm.value)
-        .subscribe(res=>{
-        alert("Password changed sucessfully!");
-        this.forgotpasswordForm.reset();
-        this.router.navigate(['login']);
-        }, err=>{
-          alert("Something went wrong!");
-        })    
-      }
-      else {
-        alert("User doesn't exists!");
-      }
-    }, err=>{
-      alert("Something went wrong!");
+  updatePassword() {
+    this.userService.getAllUsers().subscribe((res)=> {
+        const user = res.find((a:any)=>{
+          return a.userId == this.forgotpasswordForm.value.userId
+        });
+        if(user) {
+          this.userService.updateUserById(this.forgotpasswordForm.value.userId, this.forgotpasswordForm.value).subscribe((res)=>{
+            alert("Password changed successfully!");
+            this.forgotpasswordForm.reset();
+            this.router.navigate(['login']);
+          }
+        )}
+        else {
+          alert("User doesn't exists!");
+          this.forgotpasswordForm.reset();
+        }
     })
   }
 
-  
-
-}
-export interface user {
-  userId:number;
-  pasword:string;
 }

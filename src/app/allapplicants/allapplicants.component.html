@@ -15,7 +15,7 @@
           <th> Name </th>
           <th> Age </th>
           <th> Gender </th>
-          <th> City </th>
+          <!-- <th> City </th> -->
           <th> Employement </th>
           <th> Existing Emi </th>
           <th> Salary </th>
@@ -31,7 +31,7 @@
           <td> {{applicant.name}} </td>
           <td> {{applicant.age}} </td>
           <td> {{applicant.gender}} </td>
-          <td> {{applicant.address.city}} </td>
+          <!-- <td> {{applicant.address.city}} </td> -->
           <td> {{applicant.employment}} </td>
           <td> {{applicant.existingEmi}} </td>
           <td> {{applicant.salary}} </td>
@@ -59,7 +59,7 @@
           <th> Emi </th>
           <th> Loan Status </th>
           <th> Approve Loan </th>
-          <th> Decline Loan </th>
+          <th> Reject Loan </th>
         </tr>
       </thead>
       <tbody class="tbody">
@@ -72,8 +72,8 @@
           <td> {{loan.rateOfInterest}} </td>
           <td> {{loan.emi}} </td>
           <td> {{loan.loanStatus}} </td>
-          <td> <button type = "button" style="color: white; background-color: rgb(9, 63, 9); font-size: 15px; padding: 5px;"> Approve </button></td>
-          <td> <button type = "button" style="color: white; background-color: rgb(113, 3, 3); font-size: 15px; padding: 5px;"> Decline </button></td>
+          <td> <button (click)="onApprove(loan.loanId, loan)" type = "button" style="color: white; background-color: rgb(9, 63, 9); font-size: 15px; padding: 5px;"> Approve </button></td>
+          <td> <button (click)="onReject(loan.loanId, loan)" type = "button" style="color: white; background-color: rgb(113, 3, 3); font-size: 15px; padding: 5px;"> Reject </button></td>
         </tr>
       
       </tbody>

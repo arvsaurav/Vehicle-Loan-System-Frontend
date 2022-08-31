@@ -19,22 +19,29 @@ export class UserService {
     return this.http.get(this.baseUrl+"user/"+id);
   }
 
+  updateUserById(id:number, user:any) {
+    return this.http.put(this.baseUrl+"user/"+id, user);
+  }
+
   getApplicantById(userId: number) : Observable<any> {
     return this.http.get(this.baseUrl+"applicant/"+userId);
   }
 
-  // addUser(user: User) : Observable<any>{
-  //   return this.http.post<any>(this.baseUrl+"adduser", user);
-  // }
+  addUser(user: any) : Observable<any>{
+    return this.http.post<any>(this.baseUrl+"adduser", user);
+  }
 
   getAllApplicants() : Observable<any> {
     return this.http.get<any>(this.baseUrl+"applicants");
   }
 
+  getLoanByApplicantId(applicantId : number) : Observable<any> {
+    return this.http.get(this.baseUrl+"loanByApplicantId/"+applicantId);
+  }
+
+  addApplicant(applicant:any) : Observable<any> {
+    return this.http.post<any>(this.baseUrl+"addapplicant", applicant);
+  }
+
 }
 
-// export class User {
-//   private
-//   private userId !: number;
-//   private password !: String;
-// }
