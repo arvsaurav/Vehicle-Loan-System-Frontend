@@ -3,7 +3,7 @@
 <body>
 
   <h1 style="font-size: 60px">Clients!</h1>
-  
+
   <div>
     <a routerLink="/admindashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to admin dashboard</a>
   </div>
@@ -15,7 +15,6 @@
           <th> Name </th>
           <th> Age </th>
           <th> Gender </th>
-          <!-- <th> City </th> -->
           <th> Employement </th>
           <th> Existing Emi </th>
           <th> Salary </th>
@@ -40,7 +39,7 @@
           <td> {{applicant.aadharNo}} </td>
           <td> {{applicant.panNo}} </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>
@@ -72,15 +71,20 @@
           <td> {{loan.rateOfInterest}} </td>
           <td> {{loan.emi}} </td>
           <td> {{loan.loanStatus}} </td>
-          <td> <button (click)="onApprove(loan.loanId, loan)" type = "button" style="color: white; background-color: rgb(9, 63, 9); font-size: 15px; padding: 5px;"> Approve </button></td>
-          <td> <button (click)="onReject(loan.loanId, loan)" type = "button" style="color: white; background-color: rgb(113, 3, 3); font-size: 15px; padding: 5px;"> Reject </button></td>
+          <td> <button (click)="onApprove(loan.loanId, loan)" type="button"
+              style="color: white; background-color: rgb(9, 63, 9); font-size: 15px; padding: 5px;"> Approve </button>
+          </td>
+          <td> <button (click)="onReject(loan.loanId, loan)" type="button"
+              style="color: white; background-color: rgb(113, 3, 3); font-size: 15px; padding: 5px;"> Reject </button>
+          </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>
 
-  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px; margin-bottom: 150px"> Vehicle Details!
+  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px; margin-bottom: 150px"> Vehicle
+    Details!
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
@@ -103,7 +107,7 @@
           <td> {{vehicle.exShowroomPrice}} </td>
           <td> {{vehicle.onRoadPrice}} </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>

@@ -4,39 +4,39 @@
     <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i>
     <p>Page 2</p>
   </div>
-  <form [formGroup]="appForm1" (ngSubmit)="onSubmit()"  class="signupForm" name="signupform">
+  <form [formGroup]="appForm1" (ngSubmit)="onSubmit()" class="signupForm" name="signupform">
     <h2>Personal Details</h2>
     <ul class="noBullet">
       <h3>Address</h3>
       <li>
         <label for="houseNo"></label>
-        <input type="text" class="inputFields" id="houseNo"  placeholder="House No" formControlName = "houseNo">
+        <input type="text" class="inputFields" id="houseNo" placeholder="House No" formControlName="houseNo">
       </li>
       <li>
-          <label for="area"></label>
-          <input type="text" class="inputFields" id="area"  placeholder="Area" formControlName = "area">
-        </li>
-        <li>
-          <label for="city"></label>
-          <input type="text" class="inputFields" id="city"  placeholder="City" formControlName = "city">
-        </li>
-        <li>
-          <label for="state"></label>
-          <input type="text" class="inputFields" id="state"  placeholder="State" formControlName = "state">
-        </li>
-        <li>
-          <label for="pinCode"></label>
-          <input type="text" class="inputFields" id="pinCode"  placeholder="PinCode" formControlName = "pinCode">
-        </li>
+        <label for="area"></label>
+        <input type="text" class="inputFields" id="area" placeholder="Area" formControlName="area">
+      </li>
+      <li>
+        <label for="city"></label>
+        <input type="text" class="inputFields" id="city" placeholder="City" formControlName="city">
+      </li>
+      <li>
+        <label for="state"></label>
+        <input type="text" class="inputFields" id="state" placeholder="State" formControlName="state">
+      </li>
+      <li>
+        <label for="pinCode"></label>
+        <input type="text" class="inputFields" id="pinCode" placeholder="PinCode" formControlName="pinCode">
+      </li>
 
       <li>
-        <button type="submit"id="join-btn" (click)="onBack()"  >  Back</button>
-          <button type="submit"id="join-btn" >Next</button>
-          
+        <button type="submit" id="join-btn" (click)="onBack()"> Back</button>
+        <button type="submit" id="join-btn">Next</button>
+
       </li>
-  
+
     </ul>
     <br><br><br><br><br><br><br>
   </form>
-  
+
 </div>

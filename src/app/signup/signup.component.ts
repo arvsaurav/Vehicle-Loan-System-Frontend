@@ -19,32 +19,32 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signupForm = this.formBuilder.group({
-      userId:[''],
-      password:['']
+      userId: [''],
+      password: ['']
     })
   }
 
   verifyUser() {
-    this.userService.getAllUsers().subscribe((res)=> {
-        const user = res.find((a:any)=>{
-          return a.userId == this.signupForm.value.userId
-        });
-        if(user) {
-          alert("User already exists!");
-          this.signupForm.reset();
-          this.router.navigate(['login']);
-        }
-        else {
-          this.addUser(this.signupForm.value);
-        }
+    this.userService.getAllUsers().subscribe((res) => {
+      const user = res.find((a: any) => {
+        return a.userId == this.signupForm.value.userId
+      });
+      if (user) {
+        alert("User already exists!");
+        this.signupForm.reset();
+        this.router.navigate(['login']);
+      }
+      else {
+        this.addUser(this.signupForm.value);
+      }
     })
   }
 
-  addUser(user:any) {
-    this.userService.addUser(user).subscribe((res)=>{
-        alert("Signup Successful!");
-        this.signupForm.reset();
-        this.router.navigate(['login']);
+  addUser(user: any) {
+    this.userService.addUser(user).subscribe((res) => {
+      alert("Signup Successful!");
+      this.signupForm.reset();
+      this.router.navigate(['login']);
     })
   }
 

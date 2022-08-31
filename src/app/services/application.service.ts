@@ -8,40 +8,40 @@ import { Application } from '../application/Application';
 })
 export class ApplicationService {
 
-  baseURL:string="http://localhost:8081";
+  baseURL: string = "http://localhost:8081";
 
 
-  constructor(private httpSer:HttpClient) { }
-  
+  constructor(private httpSer: HttpClient) { }
 
-  public addApplicant(e:Application):Observable<Object>{
+
+  public addApplicant(e: Application): Observable<Object> {
     console.log(e);
-    console.log(this.httpSer.post<any>(this.baseURL+'/addapplicant' ,e))
-    return this.httpSer.post<any>(this.baseURL +'/addapplicant' ,e);
+    console.log(this.httpSer.post<any>(this.baseURL + '/addapplicant', e))
+    return this.httpSer.post<any>(this.baseURL + '/addapplicant', e);
 
   }
-  public addApp1(e:any):Observable<Object>{
+  public addApp1(e: any): Observable<Object> {
     console.log(e);
-    console.log(this.httpSer.post<any>(this.baseURL+'/addaddress' ,e))
-    return this.httpSer.post<any>(this.baseURL +'/addaddress' ,e);
+    console.log(this.httpSer.post<any>(this.baseURL + '/addaddress', e))
+    return this.httpSer.post<any>(this.baseURL + '/addaddress', e);
 
   }
-  public addApp2(e:any):Observable<Object>{
+  public addApp2(e: any): Observable<Object> {
     console.log(e);
     //console.log(this.httpSer.post<any>(this.baseURL+'/addapplicant' ,e))
-    return this.httpSer.post<any>(this.baseURL +'/addapplicant' ,e);
+    return this.httpSer.post<any>(this.baseURL + '/addapplicant', e);
 
   }
-  public addApp3(e:any):Observable<Object>{
+  public addApp3(e: any): Observable<Object> {
     console.log(e);
-    console.log(this.httpSer.post<any>(this.baseURL+'/addvehicle' ,e))
-    return this.httpSer.post<any>(this.baseURL +'/addvehicle' ,e);
+    console.log(this.httpSer.post<any>(this.baseURL + '/addvehicle', e))
+    return this.httpSer.post<any>(this.baseURL + '/addvehicle', e);
 
   }
-  public addApp4(e:any):Observable<Object>{
+  public addApp4(e: any): Observable<Object> {
     console.log(e);
-    console.log(this.httpSer.post<any>(this.baseURL+'/addloan' ,e))
-    return this.httpSer.post<any>(this.baseURL +'/addloan' ,e);
+    console.log(this.httpSer.post<any>(this.baseURL + '/addloan', e))
+    return this.httpSer.post<any>(this.baseURL + '/addloan', e);
 
   }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-declare function reset():any;
+declare function reset(): any;
 
-declare function calculation():any;
+declare function calculation(): any;
 
 @Component({
   selector: 'app-emi-calculator',
@@ -11,7 +11,7 @@ declare function calculation():any;
 })
 export class EmiCalculatorComponent implements OnInit {
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit(): void {

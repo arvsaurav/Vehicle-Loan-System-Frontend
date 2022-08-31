@@ -10,7 +10,7 @@ export class AllusersComponent implements OnInit {
 
   userDetails = null;
 
-  constructor(private userService : UserService) { 
+  constructor(private userService: UserService) {
     this.getUserDetails();
   }
 
@@ -20,8 +20,8 @@ export class AllusersComponent implements OnInit {
 
   getUserDetails() {
     this.userService.getAllUsers().subscribe(
-      (res)=>{
-              this.userDetails = res;
-    })
+      (res) => {
+        this.userDetails = res;
+      })
   }
 }

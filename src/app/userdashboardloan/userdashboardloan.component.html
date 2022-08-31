@@ -3,7 +3,7 @@
 <body>
 
   <h1 style="font-size: 60px">Loan Amount!</h1>
-  
+
   <div>
     <a routerLink="/userdashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to user dashboard</a>
   </div>
@@ -40,7 +40,7 @@
           <td> {{applicant.aadharNo}} </td>
           <td> {{applicant.panNo}} </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>
@@ -69,38 +69,8 @@
           <td> {{loan.emi}} </td>
           <td> {{loan.loanStatus}} </td>
         </tr>
-      
+
       </tbody>
     </table>
   </div>
-
-  <!--
-
-  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px; margin-bottom: 150px"> Vehicle Details!
-    <table class="table table-bordered">
-      <thead class="thead">
-        <tr>
-          <th> Vehicle Id </th>
-          <th> Applicant Id </th>
-          <th> Manufacturer </th>
-          <th> Vehicle Type </th>
-          <th> Model </th>
-          <th> Ex-Showroom Price </th>
-          <th> On-Road Price </th>
-        </tr>
-      </thead>
-      <tbody class="tbody">
-        <tr *ngFor="let vehicle of vehicleById">
-          <td> {{vehicle.vehicleId}} </td>
-          <td> {{vehicle.applicantId}} </td>
-          <td> {{vehicle.manufacturer}} </td>
-          <td> {{vehicle.vehicleType}} </td>
-          <td> {{vehicle.model}} </td>
-          <td> {{vehicle.exShowroomPrice}} </td>
-          <td> {{vehicle.onRoadPrice}} </td>
-        </tr>
-      
-      </tbody>
-    </table> -->
-  <!-- </div> -->
 </body>

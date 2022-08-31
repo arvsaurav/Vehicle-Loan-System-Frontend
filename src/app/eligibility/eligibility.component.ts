@@ -8,16 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./eligibility.component.css']
 })
 export class EligibilityComponent implements OnInit {
-  
 
-  constructor(private router:Router) { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    
-      this.router.navigate(['loanoffer']);
+  onSubmit() {
+
+    this.router.navigate(['loanoffer']);
   }
 
 }

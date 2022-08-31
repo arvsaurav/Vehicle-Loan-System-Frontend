@@ -6,11 +6,11 @@ export class Application {
 	gender!: string;
 	phoneNo!: number;
 	emailId!: string;
-	employment!:string;
-	existingEmi!:number;
-	salary!:number;
-	aadharNo!:number;
-	panNo!:string;
+	employment!: string;
+	existingEmi!: number;
+	salary!: number;
+	aadharNo!: number;
+	panNo!: string;
 }
 
 // address
@@ -27,19 +27,19 @@ export class app1 {
 export class app3 {
 	userId!: number;
 	manufacturer!: string;
-	vehicleType!:string;
+	vehicleType!: string;
 	model!: string;
 	exShowroomPrice!: number;
-	onRoadPrice!:number;
+	onRoadPrice!: number;
 }
 
 //loan details
 export class app4 {
 	userId!: number;
-	accountType!:string;
+	accountType!: string;
 	amount!: number;
 	loanTenure!: number;
 	rateOfInterest!: number;
-	emi!:number;
-	loanStatus!:string;
+	emi!: number;
+	loanStatus!: string;
 }

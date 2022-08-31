@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       const u = res.find((a: any) => {
         return a.userId == this.loginForm.value.userId && a.password == this.loginForm.value.password
       });
-      if(u) {
+      if (u) {
         // u is authData
         alert("Login successful!");
         //console.log(u);

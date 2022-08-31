@@ -9,7 +9,7 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
 import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
