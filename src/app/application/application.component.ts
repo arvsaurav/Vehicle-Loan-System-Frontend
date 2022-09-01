@@ -14,7 +14,6 @@ export class ApplicationComponent implements OnInit {
   appForm!: FormGroup;
 
   u!: Application; //= {userId:1, name:"a", age:1, gender:"a", phoneNo:1, emailId:"a", password:"a"};
-
   constructor(private fb: FormBuilder, private appSer: ApplicationService, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
@@ -39,7 +38,7 @@ export class ApplicationComponent implements OnInit {
     this.u.userId = item.userId;
     this.userService.addApplicant(this.u).subscribe((data: any) => {
       alert("Personal details updated");
-      console.log(this.appForm.value)
+      console.log(this.appForm.value);
     });
     this.router.navigate(['app1']);
 

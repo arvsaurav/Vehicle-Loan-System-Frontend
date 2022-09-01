@@ -1,72 +1,53 @@
-<!DOCTYPE html>
-<html>
+<div id="body">
 
-<header>
-  <link rel="stylesheet" href="
-        C:/Users/Lenovo/Desktop/emi calculator/EMI-Cal/EMI-Cal.css
-      ">
-  <script type="text/javascript" src="
-        C:/Users/Lenovo/Desktop/emi calculator/EMI-Cal/EMI-Cal.js
-      "></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-  <header>
+  <div class="part">
+    <div class="part2">
+      <h1 id=title1>CAR LOAN EMI CALCULATOR</h1>
+      <h2 id=title1>KEY POINTS</h2>
+      <ul>
+        <li>Lowest interest rate @5.00% onwards</li>
+        <li>Loan up to 100% of on road price(On certain car models)</li>
+        <li>Loan tenure from 12months to 7 years</li>
+      </ul>
+    </div>
+  </div>
 
-    <div id="border">
-      <!--border-->
+  <div class="part3">
+    <div class="part5" ng-controller="nyctrm" ng-app="myapp">
+      <div class="part4">
 
-      <div id="emi-calculation">
-        <!--calculation part-->
+        <div class="part6">
+          <h4 id=title1>EMI CALCULATOR</h4>
+        </div>
+        <div class="center">
+          <p>LOAN VALUE(₹):- </p><input type="number" class="form-control" min="100000" max="10000000"
+            [(ngModel)]="loan" value="{{loan}}" />
 
-        <p id="title"><strong>EMI Calculator<strong>
+          <p>TENURE(YEARS):-</p><input type="number" class="form-control" min="1" max="7" [(ngModel)]="years" />
 
-              <div class="section">
-                <!--loan amount with input-->
-                <label id="loanamount" class="label">Loan Amount:(Rs.)</label>
-                <input type="number" class="input" id="value1" placeholder="Enter Loan amount..">
-              </div>
-              <!--loan amount with input closing-->
+          <p>INTEREST PERCENTAGE(%):- </p><input type="number" class="form-control" step="0.1" min="5"
+            [(ngModel)]="interest" />
+        </div>
 
-              <div class="section">
-                <!--interest rate with input-->
-                <label id="interestrate" class="label">Interest Rate:(%)</label>
-                <input type="number" class="input" id="value2" placeholder="Enter IR per year..">
-              </div>
-              <!--interest rate with input closing-->
+      </div>
+      <div class="part7">
+        <div class="part6">
+          <h4 id=title1>Break-up of Total Payment</h4>
+        </div>
+        <div class="emidetails">
+          <h5>Equated Monthly Installments (EMI) For <b>{{this.years*12}}</b> Months</h5>
+          <b id="emi">₹{{fun()}}</b>
+        </div>
 
-              <div class="section">
-                <!--loan terms with input-->
-                <label id="loanduration" class="label">Loan Duration(Years):</label>
-                <input type="number" class="input" id="value3" placeholder="Enter loan duration..">
-              </div>
-              <!--loan terms with input closing-->
+        <div class="details">
+          <div class="labels">
+            <h5>Principal amount: <b>₹{{loan}}</b>
+              Interest amount: <b>₹{{ins()}}</b>
+              Total amount: <b>₹{{total()}}</b> </h5>
+          </div>
 
-
-
-              <div class="submit">
-                <!--button-->
-                <button type="submit" id="calc" onclick="calculation()">Calculate</button>
-              </div>
-              <!--button closing-->
-
-              <!--Calculation part closing-->
-
-              <div id="emi-output" style="margin-top: 30px;">
-                <div class="result">Monthly Interest: <span id="monthly-interest"></span>
-                </div>
-                <div class="result">Monthly Payment: <span id="monthly-payment"></span>
-                </div>
-                <div class="result">Total Repayment: <span id="total-repayment"></span>
-                </div>
-                <div class="result">Total Interest Cost: <span id="total-interest"></span>
-                </div>
-
-                <div class="submit">
-                  <!--button-->
-                  <button type="submit" id="reset" onclick="reset()">Reset</button>
-                </div>
-                <!--button closing-->
-
-              </div>
-
-              <!--border closing-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

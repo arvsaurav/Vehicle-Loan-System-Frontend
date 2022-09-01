@@ -1,70 +1,195 @@
-#border {
+#body {
+  /* border: 3px solid brown; */
+  padding-top: 5vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-image: url('src/assets/car1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; */
+  background-color: cornflowerblue;
+  flex-direction: column;
+}
+
+#content {
+  width: 80vw;
+  /* border: 3px solid brown; */
+  margin: 30px 0 30px 0;
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 3px solid brown; */
+  height: 40vh;
+  width: 80vw;
+
+}
+
+.part1 {
+  height: 40vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  background-repeat: no-repeat;
+
+  /* border:solid 5px rgb(3, 3, 246); */
+
+}
+
+.part3 {
+  height: 190vh;
+  width: 80vw;
+  display: flex;
+
+  flex-direction: column;
+  /* border:solid 5px rgb(3, 3, 246); */
+
+
+}
+
+.part4 {
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  /* height: 50vh;
+  width: 30%; */
+  min-height: 30%;
+  /* height: 50vh; */
+  width: 30%;
   align-items: center;
+  padding-bottom: 20px;
+  border: 2px black solid;
+  box-shadow: 10px 10px 5px #ccc;
+
+
+
+
 }
 
-#emi-calculation {
-  margin-top: 10px;
-  width: 500px;
-  height: 270px;
-  border: 2px solid blue;
-  box-shadow: 2px 5px 5px gray;
-  border-radius: 5px;
+.part5 {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
 }
 
-#title {
-  font-size: 30px;
-  font-family: verdana;
-  color: blue;
-  text-align: center;
-  text-decoration: underline;
+.part6 {
+  min-height: 16%;
+  width: 100%;
+
+  border-bottom: 2px solid black;
+  background-color: rgb(173, 206, 220);
+
+
 }
 
-#emi-output {
-  width: 500px;
-  height: 280px;
-  border: 2px solid blue;
-  box-shadow: 2px 5px 5px gray;
-  border-radius: 5px;
-  margin-top: 10px;
+.part7 {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  min-height: 30%;
+  width: 40%;
+  align-items: center;
+  border: 2px black solid;
+  box-shadow: 10px 10px 5px #ccc;
+
+
 }
 
-.section {
-  margin-left: 10px;
-  font-size: 20px;
-  padding: 10px;
-  font-family: verdana;
+.emidetails {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 2px solid black;
 }
 
-.result {
-  margin-top: 20px;
-  margin-left: 10px;
-  font-size: 20px;
-  padding: 5px;
-  font-family: verdana;
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  /* border: 2px red solid;   */
 }
 
-.input {
-  float: right;
-  height: 20px;
-  margin-right: 10px;
+
+
+#emi {
+  font-size: 50px;
+  color: rgb(2, 92, 130);
+  ;
 }
 
-#calc,
-#reset {
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
-  background-color: steelblue;
-  box-shadow: 2px 5px 5px gray;
+
+
+#title1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding-left: 2vw;
+  padding-top: 2vh;
+
 }
 
-.submit {
-  text-align: center;
-  margin-top: 20px;
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-#reset {
-  background-color: YELLOW;
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+}
+
+
+
+.givenData {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 18%;
+  /* border: 1px solid yellow; */
+  align-items: center;
+  height: 50%;
+  font-size: large;
+}
+
+.labels {
+  width: 50%;
+  display: flex;
+  /* align-items: center; */
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 1px solid green; */
+  height: 50%;
+  font-size: large;
+}
+
+.dataInput {
+  width: 60%;
 }
