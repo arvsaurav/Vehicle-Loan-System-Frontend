@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApplicationService } from 'src/app/services/application.service';
+import { VehicleService } from 'src/app/services/vehicle.service';
 import { app4 } from '../Application';
 
 @Component({
@@ -13,7 +14,7 @@ export class App4Component implements OnInit {
 
   appForm4!: FormGroup;
   u!: app4;
-  constructor(private fb: FormBuilder, private appSer: ApplicationService, private router: Router) { }
+  constructor(private fb: FormBuilder, private appSer: ApplicationService, private vehicleService: VehicleService, private router: Router) { }
 
   ngOnInit(): void {
     this.appForm4 = this.fb.group({
@@ -38,6 +39,11 @@ export class App4Component implements OnInit {
 
   }
   onBack() {
+    var item = JSON.parse(sessionStorage.getItem('currentVehicle') || '{}');
+    this.vehicleService.deleteVehicle(item.vehicleId).subscribe((data)=>
+    {
+
+    })
     this.router.navigate(['app3']);
 
   }

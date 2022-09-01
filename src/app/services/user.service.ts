@@ -47,5 +47,9 @@ export class UserService {
     return this.http.post<any>(this.baseUrl + "addapplicant", applicant);
   }
 
+  deleteApplicant(id: number): Observable<any> {
+    return this.http.delete<any>(this.baseUrl + "applicant/" + id);
+  }
+
 }
 

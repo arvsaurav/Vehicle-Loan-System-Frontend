@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApplicationService } from 'src/app/services/application.service';
+import { UserService } from 'src/app/services/user.service';
 import { app1 } from '../Application';
 
 @Component({
@@ -14,7 +15,7 @@ export class App1Component implements OnInit {
 
   u!: app1;
 
-  constructor(private fb: FormBuilder, private appSer: ApplicationService, private router: Router) { }
+  constructor(private fb: FormBuilder, private appSer: ApplicationService, private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.appForm1 = this.fb.group({
@@ -34,13 +35,19 @@ export class App1Component implements OnInit {
     this.appSer.addApp1(this.u).subscribe((data: any) => {
       alert("Address details updated");
       console.log(this.appForm1.value)
+      sessionStorage.setItem('currentAddress', JSON.stringify(data));
     });
     this.router.navigate(['app3']);
 
   }
   onBack() {
-    this.router.navigate(['application']);
+    var item = JSON.parse(sessionStorage.getItem('currentApplicant') || '{}');
+    console.log(item.applicantId);
+    this.userService.deleteApplicant(item.applicantId).subscribe((data)=>
+    {
 
+    })
+    this.router.navigate(['application']);
   }
 
 }

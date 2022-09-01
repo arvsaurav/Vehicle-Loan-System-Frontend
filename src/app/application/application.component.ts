@@ -39,14 +39,14 @@ export class ApplicationComponent implements OnInit {
     this.userService.addApplicant(this.u).subscribe((data: any) => {
       alert("Personal details updated");
       console.log(this.appForm.value);
+      sessionStorage.setItem('currentApplicant', JSON.stringify(data));
     });
     this.router.navigate(['app1']);
 
   }
   onBack() {
-
+    
     this.router.navigate(['loanoffer']);
-
   }
 
 }

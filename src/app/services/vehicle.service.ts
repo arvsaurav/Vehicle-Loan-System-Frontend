@@ -26,4 +26,8 @@ export class VehicleService {
   getVehicleByUserId(userId: number): Observable<any> {
     return this.http.get(this.baseUrl + "vehicleByUserId/" + userId);
   }
+
+  deleteVehicle(id: number): Observable<any> {
+    return this.http.delete(this.baseUrl + "vehicle/" + id);
+  }
 }
