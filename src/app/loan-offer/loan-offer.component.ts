@@ -17,4 +17,7 @@ export class LoanOfferComponent implements OnInit {
     this.router.navigate(['/application']);
   }
 
+  onBack() {
+    this.router.navigate(['/eligibility']);
+  }
 }

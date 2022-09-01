@@ -20,4 +20,7 @@ export class EligibilityComponent implements OnInit {
     this.router.navigate(['loanoffer']);
   }
 
+  backToDashboard() {
+    this.router.navigate(['userdashboard']);
+  }
 }

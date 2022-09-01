@@ -10,7 +10,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; */
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
+  background-color: rgb(96, 174, 143);
   flex-direction: column;
 }
 
