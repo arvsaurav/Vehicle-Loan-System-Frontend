@@ -1,72 +1,51 @@
 <div class="signupSection">
 
   <form action="#" method="POST" class="signupForm" name="signupform">
-    <h1>Congratulations</h1>
+    <h1>Congratulations!</h1>
     <h3>You have been approved for the loan</h3>
     <br><br>
-
     <ul class="noBullet">
       <h4>Your Loan Quotes</h4>
       <table class="center">
-
-
         <tbody>
-
           <tr>
             <th>
-
-              <p>Loan Amount</p>
-              <label for="On Road Price"></label>
-              <input type="text" class="inputFields" id="On Road Price" value=""
-                oninput="return userNameValidation(this.value)" required />
-
+              <p>Loan Ammount:</p>
+              <p>{{amount}}</p>
             </th>
             <td></td>
             <td></td>
             <th>
-              <p>Best Rate</p>
-              <label for="On Road Price"></label>
-              <input type="text" class="inputFields" id="On Road Price" value=""
-                oninput="return userNameValidation(this.value)" required />
-
+              <p>Best Rate(%)</p>
+              <p>{{rate}}</p>
             </th>
-
           </tr>
-
           <tr>
             <th>
-
               <p>EMI</p>
-              <label for="On Road Price"></label>
-              <input type="text" class="inputFields" id="On Road Price" value=""
-                oninput="return userNameValidation(this.value)" required />
+              <p>{{emi}}</p>
 
+            </th>
+            <td></td>
+            <td></td>
+            <th>
+              <p>Loan Tenure(months)</p>
+              <p>{{tenure}}</p>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <p>A/C Type</p>
+              <p>Personel Account</p>
             </th>
             <td></td>
             <td></td>
             <th>
               <p>Processing Fee</p>
-              <label for="On Road Price"></label>
-              <input type="text" class="inputFields" id="On Road Price" value=""
-                oninput="return userNameValidation(this.value)" required />
-
-            </th>
-
-          </tr>
-          <tr>
-            <th>
-              <p>A/C Type</p>
-              <label for="On Road Price"></label>
-              <input type="text" class="inputFields" id="On Road Price" value=""
-                oninput="return userNameValidation(this.value)" required />
+              <p>{{processing}}</p>
             </th>
           </tr>
-
-
         </tbody>
-
-
-
       </table>
       <br><br>
       <button type="submit" id="join-btn" (click)="onSubmit()">Apply for Loan</button>
@@ -76,7 +55,4 @@
 
     </ul>
 
-    <br><br><br><br><br><br>
-
-
-  </form>
+    <br><br><br><br><br><br><br><br>

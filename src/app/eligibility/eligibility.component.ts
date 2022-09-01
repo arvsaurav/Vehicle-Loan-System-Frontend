@@ -15,10 +15,23 @@ export class EligibilityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-
-    this.router.navigate(['loanoffer']);
-  }
+  getEligibility(pr:any,em:any,ag:any,sal:any){
+  
+    sal=sal/12;
+    sal=sal*0.6;
+    sal=sal-em;
+   
+    if(pr>50000 && ag>21 && sal>0.02*pr){
+     sessionStorage.setItem("pri",pr);
+     sessionStorage.setItem("salary",sal);
+     this.router.navigate(['loanoffer']);
+   }
+   else{
+     alert("You are not eligible for the Loan");
+     this.router.navigate(['userdashboard']);
+   }
+ 
+   }
 
   backToDashboard() {
     this.router.navigate(['userdashboard']);
