@@ -22,4 +22,8 @@ export class VehicleService {
   getVehicleById(id: number): Observable<any> {
     return this.http.get(this.baseUrl + "vehicle/" + id);
   }
+
+  getVehicleByUserId(userId: number): Observable<any> {
+    return this.http.get(this.baseUrl + "vehicleByUserId/" + userId);
+  }
 }

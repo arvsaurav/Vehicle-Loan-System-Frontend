@@ -21,6 +21,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
+  height: 850px;
+  margin-top: 12%;
+  padding-bottom: 10%;
   text-align: center;
   display: flex;
   color: rgb(241, 244, 245);
@@ -48,7 +51,6 @@ body {
   background: rgba(48, 53, 53, 0.8);
   transition: .2s;
   box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
-
 }
 
 .inputFields {

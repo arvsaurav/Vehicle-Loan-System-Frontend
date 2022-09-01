@@ -27,6 +27,10 @@ export class UserService {
     return this.http.get(this.baseUrl + "applicant/" + userId);
   }
 
+  getApplicantByUserId(userId: number): Observable<any> {
+    return this.http.get(this.baseUrl + "applicantByUserId/" + userId);
+  }
+
   addUser(user: any): Observable<any> {
     return this.http.post<any>(this.baseUrl + "adduser", user);
   }

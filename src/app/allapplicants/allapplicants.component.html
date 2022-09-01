@@ -2,7 +2,7 @@
 
 <body>
 
-  <h1 style="font-size: 60px">Clients!</h1>
+  <h1 style="font-size: 60px">Applicants!</h1>
 
   <div>
     <a routerLink="/admindashboard" style="color: rgb(12, 62, 85); font-size: 20px;">Back to admin dashboard</a>
@@ -11,6 +11,7 @@
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
+          <th> User Id </th>
           <th> Applicant Id </th>
           <th> Name </th>
           <th> Age </th>
@@ -26,11 +27,11 @@
       </thead>
       <tbody class="tbody">
         <tr *ngFor="let applicant of applicantDetails">
+          <td> {{applicant.userId}} </td>
           <td> {{applicant.applicantId}} </td>
           <td> {{applicant.name}} </td>
           <td> {{applicant.age}} </td>
           <td> {{applicant.gender}} </td>
-          <!-- <td> {{applicant.address.city}} </td> -->
           <td> {{applicant.employment}} </td>
           <td> {{applicant.existingEmi}} </td>
           <td> {{applicant.salary}} </td>
@@ -39,7 +40,34 @@
           <td> {{applicant.aadharNo}} </td>
           <td> {{applicant.panNo}} </td>
         </tr>
+      </tbody>
+    </table>
+  </div>
 
+
+  <div style="align-items: center; margin-left: 15%; font-size: 20px; margin-top: 30px;"> Address Details!
+    <table class="table table-bordered">
+      <thead class="thead">
+        <tr>
+          <th> User Id </th>
+          <th> Address Id </th>
+          <th> State </th>
+          <th> City </th>
+          <th> Area </th>
+          <th> House Number </th>
+          <th> Pin Code </th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let address of addressDetails">
+          <td> {{address.userId}} </td>
+          <td> {{address.addressId}} </td>
+          <td> {{address.state}} </td>
+          <td> {{address.city}} </td>
+          <td> {{address.area}} </td>
+          <td> {{address.houseNo}} </td>
+          <td> {{address.pinCode}} </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -49,8 +77,8 @@
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
+          <th> User Id </th>
           <th> Loan Id </th>
-          <th> Applicant Id </th>
           <th> Account Type </th>
           <th> Amount </th>
           <th> Loan Tenure </th>
@@ -63,8 +91,8 @@
       </thead>
       <tbody class="tbody">
         <tr *ngFor="let loan of loanDetails">
+          <td> {{loan.userId}} </td>
           <td> {{loan.loanId}} </td>
-          <td> 1 </td>
           <td> {{loan.accountType}} </td>
           <td> {{loan.amount}} </td>
           <td> {{loan.loanTenure}} </td>
@@ -88,8 +116,8 @@
     <table class="table table-bordered">
       <thead class="thead">
         <tr>
+          <th> User Id </th>
           <th> Vehicle Id </th>
-          <th> Applicant Id </th>
           <th> Manufacturer </th>
           <th> Vehicle Type </th>
           <th> Model </th>
@@ -99,8 +127,8 @@
       </thead>
       <tbody class="tbody">
         <tr *ngFor="let vehicle of vehicleDetails">
+          <td> {{vehicle.userId}} </td>
           <td> {{vehicle.vehicleId}} </td>
-          <td> {{vehicle.applicantId}} </td>
           <td> {{vehicle.manufacturer}} </td>
           <td> {{vehicle.vehicleType}} </td>
           <td> {{vehicle.model}} </td>
